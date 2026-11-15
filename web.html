@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>benedikt.cc</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #090909;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+/* NAVBAR */
+
+nav {
+    height: 75px;
+    border-bottom: 1px solid #202020;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #666;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .2s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* MAIN */
+
+.main {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 65px;
+    align-items: center;
+    padding: 75px 0 85px;
+}
+
+.main-image {
+    position: relative;
+}
+
+.main-image img {
+    width: 100%;
+    display: block;
+    border: 1px solid #292929;
+    border-radius: 8px;
+    box-shadow: 0 15px 60px rgba(0,0,0,.5);
+    transition: .3s;
+}
+
+.main-image img:hover {
+    transform: translateY(-4px);
+    border-color: #555;
+}
+
+.tag {
+    display: inline-block;
+    color: #999;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: 1px solid #303030;
+    padding: 7px 11px;
+    border-radius: 4px;
+    margin-bottom: 22px;
+}
+
+.main-content h1 {
+    font-size: 54px;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    font-weight: 900;
+}
+
+.main-content h1 span {
+    color: #777;
+}
+
+.main-content p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 22px;
+    max-width: 380px;
+}
+
+.main-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.btn {
+    padding: 12px 19px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.btn-white {
+    color: #000;
+    background: white;
+}
+
+.btn-white:hover {
+    background: #ccc;
+}
+
+.btn-dark {
+    color: white;
+    border: 1px solid #333;
+}
+
+.btn-dark:hover {
+    border-color: white;
+}
+
+/* SECTION */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.section-header h2 {
+    font-size: 22px;
+    letter-spacing: -.7px;
+}
+
+.section-header span {
+    color: #666;
+    font-size: 11px;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 65px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #242424;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    background: #181818;
+}
+
+.card-info {
+    padding: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-info h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-info p {
+    color: #777;
+    font-size: 10px;
+    margin-top: 6px;
+}
+
+.number {
+    font-size: 11px;
+    color: #555;
+}
+
+/* PREVIEW */
+
+.preview-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 70px;
+}
+
+.preview-card {
+    background: #111;
+    border: 1px solid #242424;
+    border-radius: 7px;
+    padding: 10px;
+    transition: .25s;
+}
+
+.preview-card:hover {
+    transform: translateY(-4px);
+    border-color: #555;
+}
+
+.preview-card img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+}
+
+.preview-card h3 {
+    font-size: 13px;
+    padding: 14px 5px 5px;
+}
+
+.preview-card p {
+    font-size: 11px;
+    color: #777;
+    padding: 0 5px 7px;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #222;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 750px) {
+    .main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 45px 0;
+    }
+
+    .main-content h1 {
+        font-size: 43px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .cards,
+    .preview-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 260px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <div class="logo">benedikt<span>.cc</span></div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#ambassadors">Ambassadors</a>
+            <a href="#preview">Preview</a>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+
+    <main class="main" id="home">
+
+        <div class="main-image">
+            <img src="loader1.png" alt="Benedikt.cc Loader">
+        </div>
+
+        <div class="main-content">
+
+            <div class="tag">BENEDIKT.CC / OFFICIAL</div>
+
+            <h1>
+                Welcome to<br>
+                <span>benedikt.cc</span>
+            </h1>
+
+            <p>
+                Discover benedikt.cc. Meet our ambassadors
+                and explore the interface through our
+                exclusive product previews.
+            </p>
+
+            <div class="main-buttons">
+                <a href="#preview" class="btn btn-white">VIEW PREVIEW ↗</a>
+                <a href="#ambassadors" class="btn btn-dark">AMBASSADORS</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- AMBASSADORS -->
+
+    <section id="ambassadors">
+
+        <div class="section-header">
+            <h2>Our Ambassadors</h2>
+            <span>02 MEMBERS</span>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="benediktdruhy.png" alt="Benedikt">
+
+                <div class="card-info">
+                    <div>
+                        <h3>Benedikt</h3>
+                        <p>Official Ambassador</p>
+                    </div>
+                    <div class="number">#001</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="tobixtlusty.png" alt="Tobias Hovno">
+
+                <div class="card-info">
+                    <div>
+                        <h3>Tobias Hovno</h3>
+                        <p>Official Ambassador</p>
+                    </div>
+                    <div class="number">#002</div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div>benedikt.cc © 2026</div>
+        <div>Made with questionable decisions.</div>
+    </footer>
+
+</div>
+
+</body>
+</html>
